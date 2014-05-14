@@ -1,0 +1,31 @@
+﻿@*@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.EntityFramework;*@
+
+@*@model PassStorage.Models.Service*@
+@model IEnumerable<PassStorage.Models.Service>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container-fluid" style="margin-top: 50px;">
+    <div class="row-fluid">
+        <div class="col-md-3 sidebar">
+            Sidebar here
+        </div>
+        <div class="col-md-9">
+
+        @foreach (var key in Model)
+        {
+            @key.Name    
+            <br />@key.Description   
+            <br />@key.Url   
+            @*<br />@key.UserRef*@
+            <br />
+            <br />
+        }
+
+        
+        </div>
+    </div>
+</div>
